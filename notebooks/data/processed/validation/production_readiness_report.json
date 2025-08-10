@@ -1,0 +1,6 @@
+{
+  "performance": {
+    "checks": {
+      "accuracy": true,
+      "f1_score": true,
+      "sharpe_ratio": 

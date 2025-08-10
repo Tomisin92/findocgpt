@@ -1,0 +1,26 @@
+{
+  "analysis_date": "2025-08-10T00:05:40.857712",
+  "total_texts_analyzed": 9,
+  "companies_covered": [
+    "AAPL",
+    "TSLA",
+    "MSFT",
+    "MARKET",
+    "AMZN",
+    "JPM",
+    "TECH",
+    "GOOGL",
+    "NFLX"
+  ],
+  "sentiment_distribution": {
+    "neutral": 4,
+    "very_positive": 3,
+    "positive": 1,
+    "negative": 1
+  },
+  "average_sentiment_score": 0.12436944075875966,
+  "average_confidence": 0.3,
+  "trading_signals_generated": 7,
+  "methodology": "Custom keyword-based financial sentiment analysis",
+  "keyword_categories": 6
+}

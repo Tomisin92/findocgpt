@@ -1,0 +1,56 @@
+[
+  {
+    "company": "AAPL",
+    "year": 2023,
+    "document_type": "10-K",
+    "chunk_id": "doc_0_chunk_0",
+    "chunk_index": 0,
+    "title": "Apple Inc. 10-K Filing 2023",
+    "chunk_length": 469
+  },
+  {
+    "company": "AAPL",
+    "year": 2023,
+    "document_type": "10-K",
+    "chunk_id": "doc_0_chunk_1",
+    "chunk_index": 1,
+    "title": "Apple Inc. 10-K Filing 2023",
+    "chunk_length": 314
+  },
+  {
+    "company": "MSFT",
+    "year": 2023,
+    "document_type": "Earnings",
+    "chunk_id": "doc_1_chunk_0",
+    "chunk_index": 0,
+    "title": "Microsoft Corporation Earnings Report Q4 2023",
+    "chunk_length": 467
+  },
+  {
+    "company": "MSFT",
+    "year": 2023,
+    "document_type": "Earnings",
+    "chunk_id": "doc_1_chunk_1",
+    "chunk_index": 1,
+    "title": "Microsoft Corporation Earnings Report Q4 2023",
+    "chunk_length": 175
+  },
+  {
+    "company": "TSLA",
+    "year": 2023,
+    "document_type": "Annual Report",
+    "chunk_id": "doc_2_chunk_0",
+    "chunk_index": 0,
+    "title": "Tesla Inc. Annual Report 2023",
+    "chunk_length": 484
+  },
+  {
+    "company": "TSLA",
+    "year": 2023,
+    "document_type": "Annual Report",
+    "chunk_id": "doc_2_chunk_1",
+    "chunk_index": 1,
+    "title": "Tesla Inc. Annual Report 2023",
+    "chunk_length": 268
+  }
+]

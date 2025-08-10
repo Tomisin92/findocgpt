@@ -1,0 +1,56 @@
+{
+  "analysis_date": "2025-08-10T01:33:33.501816",
+  "universe": {
+    "total_assets": 21,
+    "sectors": [
+      "Tech",
+      "Finance",
+      "Healthcare",
+      "Energy",
+      "ETFs"
+    ],
+    "period": "3y",
+    "date_range": {
+      "start": "2022-08-09T00:00:00",
+      "end": "2025-08-08T00:00:00"
+    }
+  },
+  "strategies_tested": [
+    "MA_Crossover",
+    "RSI_Strategy",
+    "Bollinger_Bands",
+    "Momentum"
+  ],
+  "best_strategy": {
+    "name": "Momentum",
+    "sharpe_ratio": 1.1613490430323912,
+    "annual_return": 0.26103448357083736,
+    "max_drawdown": 0.22209034044547793
+  },
+  "portfolio_optimization": {
+    "max_sharpe": {
+      "success": true,
+      "expected_return": 0.4660569106333036,
+      "volatility": 0.223347996256873,
+      "sharpe_ratio": 2.0866849868547312
+    },
+    "min_volatility": {
+      "success": true,
+      "expected_return": 0.09874464719349721,
+      "volatility": 0.12654422939183138,
+      "sharpe_ratio": 0.7803172666826586
+    }
+  },
+  "risk_analysis": {
+    "max_sharpe_var": -0.018633253955794196,
+    "max_sharpe_cvar": -0.029068781017360663,
+    "min_vol_var": -0.011217558162568473,
+    "min_vol_cvar": -0.01760212333094075
+  },
+  "key_insights": [
+    "Best performing strategy: Momentum",
+    "Highest Sharpe ratio achieved: 1.161",
+    "Portfolio optimization successful",
+    "Risk analysis completed for 21 assets"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "metadata": {
+    "report_title": "FinDocGPT Model Evaluation Report",
+    "generation_date": "2025-08-09T23:43:24.481361",
+    "version": "1.0.0"
+  },
+  "executive_summary": {
+    "system_score": 0.763,
+    "performance_grade": "B+",
+    "production_ready": 
