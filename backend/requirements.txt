@@ -1,14 +1,15 @@
 # Core Framework
 fastapi==0.104.1
 uvicorn==0.24.0
+# FIXED: Updated pydantic to version with better wheel support
 pydantic>=2.8.0,<3.0.0
 pydantic-settings>=2.5.0
 
 # Database & Storage
 sqlalchemy==2.0.23
 alembic==1.12.1
-# Fixed: Use asyncpg instead of psycopg2-binary for Python 3.13 compatibility
-asyncpg==0.29.0
+# FIXED: Use psycopg instead of asyncpg for Python 3.13 compatibility
+psycopg[binary,pool]>=3.1.0
 redis==5.0.1
 
 # AI/ML Core - Working versions
