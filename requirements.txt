@@ -1,6 +1,3 @@
-# FinDocGPT Complete Requirements
-# All dependencies for the AI-powered financial analysis platform
-
 # Core Framework
 fastapi==0.104.1
 uvicorn==0.24.0
@@ -10,325 +7,102 @@ pydantic-settings==2.1.0
 # Database & Storage
 sqlalchemy==2.0.23
 alembic==1.12.1
-psycopg2-binary==2.9.9
+# Fixed: Use asyncpg instead of psycopg2-binary for Python 3.13 compatibility
+asyncpg==0.29.0
 redis==5.0.1
 
-# AI/ML Core - Document Q&A
-transformers==4.36.2
-torch==2.1.2
-sentence-transformers==2.2.2
-datasets==2.16.1
-tokenizers==0.15.0
-huggingface-hub==0.20.1
+# AI/ML Core - Working versions
+openai>=1.3.0
+# Skip transformers and tokenizers for now - use alternatives
+scikit-learn>=1.3.0
+joblib>=1.3.2
+scipy>=1.11.4
 
-# AI/ML - Financial Models
-scikit-learn==1.3.2
-numpy==1.24.4
-scipy==1.11.4
-joblib==1.3.2
+# Data Processing
+pandas>=2.1.0
+numpy>=1.24.0
+requests>=2.31.0
 
-# OpenAI Integration
-openai==1.3.7
+# Financial Data APIs
+yfinance>=0.2.28
+alpha-vantage>=2.3.0
 
-# Data Processing & Financial APIs
-pandas==2.1.4
-yfinance==0.2.28
-alpha-vantage==2.3.1
-requests==2.31.0
-beautifulsoup4==4.12.2
-lxml==4.9.3
+# Technical Analysis - PURE PYTHON alternatives (no compilation)
+pandas-ta>=0.3.14b0
+# Alternative: finta>=1.3  # Another pure Python TA library
 
-# Technical Analysis
-# Note: TA-Lib requires system dependencies (see installation guide)
-# For Ubuntu: sudo apt-get install libta-lib-dev
-# For MacOS: brew install ta-lib
-# For Windows: Download from https://www.lfd.uci.edu/~gohlke/pythonlibs/#ta-lib
-ta-lib==0.4.28
-TA-Lib==0.4.28
+# Visualization & UI
+plotly>=5.17.0
+streamlit>=1.28.0
+matplotlib>=3.8.0
+seaborn>=0.13.0
 
-# Alternative technical analysis (if TA-Lib fails)
-talib-binary==0.4.19  # Fallback option
+# Utilities
+python-multipart>=0.0.6
+python-dotenv>=1.0.0
+tqdm>=4.66.0
+python-jose>=3.3.0
+passlib>=1.7.4
 
-# Visualization & Charts
-plotly==5.17.0
-matplotlib==3.8.2
-seaborn==0.13.0
-
-# Web Framework Utilities
-python-multipart==0.0.6
-python-dotenv==1.0.0
-python-jose==3.3.0
-passlib==1.7.4
-
-# HTTP & API
-httpx==0.25.2
-aiohttp==3.9.1
+# HTTP & API Clients
+httpx>=0.25.2
+aiofiles>=23.2.1
 
 # Date/Time Processing
-python-dateutil==2.8.2
+python-dateutil>=2.8.2
 
-# Async Support
-asyncio==3.4.3
-aiofiles==23.2.1
+# Data Validation & Parsing
+validators>=0.22.0
+beautifulsoup4>=4.12.2
+lxml>=4.9.3
 
 # Caching & Performance
-cachetools==5.3.2
-
-# Data Validation
-validators==0.22.0
-
-# Progress Bars
-tqdm==4.66.1
-
-# Configuration
-pyyaml==6.0.1
-toml==0.10.2
-
-# Logging
-loguru==0.7.2
-
-# Development & Testing
-pytest==7.4.3
-pytest-asyncio==0.21.1
-pytest-cov==4.1.0
-black==23.12.0
-flake8==6.1.0
-isort==5.13.2
-
-# Production WSGI/ASGI
-gunicorn==21.2.0
-
-# Monitoring (Optional)
-prometheus-client==0.19.0
-
-# Memory Management
-psutil==5.9.6
-
-# JSON Processing
-orjson==3.9.10
-
-# Image Processing (for document handling)
-Pillow==10.1.0
-pdf2image==1.16.3
-PyMuPDF==1.23.8  # For PDF processing
-
-# Natural Language Processing
-nltk==3.8.1
-spacy==3.7.2
-
-# Time Series Analysis
-statsmodels==0.14.0
-pmdarima==2.0.4  # ARIMA models
-
-# Deep Learning (Optional - for advanced models)
-tensorflow==2.15.0  # Optional: for LSTM models
-keras==2.15.0      # Optional: high-level neural networks
-
-# Vector Database (Optional)
-chromadb==0.4.18   # For vector storage
-pinecone-client==2.2.4  # Alternative vector DB
-
-# Financial Data Sources
-fredapi==0.5.1    # Federal Reserve Economic Data
-pandas-datareader==0.10.0  # Multiple data sources
-quandl==3.7.0      # Quandl financial data
-
-# Web Scraping (for news/sentiment)
-scrapy==2.11.0
-newspaper3k==0.2.8
-
-# Streamlit Dependencies
-streamlit==1.28.2
-streamlit-option-menu==0.3.6
-streamlit-aggrid==0.3.4
-streamlit-plotly-events==0.0.6
-
-# Additional Streamlit Components
-streamlit-echarts==0.4.0
-streamlit-folium==0.15.0
-streamlit-lottie==0.0.5
-
-# Docker Health Checks
-health-check==1.3.3
-
-# Environment Management
-environs==10.0.0
-
-# API Rate Limiting
-slowapi==0.1.9
-
-# Background Tasks
-celery==5.3.4      # For background processing
-redis==5.0.1       # Celery broker
-
-# File Handling
-openpyxl==3.1.2    # Excel files
-xlrd==2.0.1        # Excel files (older format)
-python-magic==0.4.27  # File type detection
-
-# Security
-cryptography==41.0.8
-bcrypt==4.1.2
-
-# Market Data Alternatives
-twelvedata==1.2.14  # Alternative to Alpha Vantage
-polygon-api-client==1.12.3  # Polygon.io API
-
-# Additional Financial Libraries
-pyfolio==0.9.2     # Portfolio analysis
-empyrical==0.5.5   # Financial risk metrics
-zipline==3.0.0     # Backtesting framework (optional)
-
-# Machine Learning Interpretability
-shap==0.43.0       # Model explanations
-lime==0.2.0.1      # Local interpretable model explanations
-
-# Kubernetes Deployment (Optional)
-kubernetes==28.1.0
-
-# API Documentation
-httpx==0.25.2      # For API testing
-
-# Data Quality
-great-expectations==0.18.8  # Data validation
-
-# Scheduling
-apscheduler==3.10.4  # Background job scheduling
+cachetools>=5.3.2
 
 # Configuration Management
-dynaconf==3.2.4    # Advanced configuration
+pyyaml>=6.0.1
+toml>=0.10.2
 
-# Performance Monitoring
-py-spy==0.3.14     # Performance profiling
+# Logging
+loguru>=0.7.2
 
-# Memory Optimization
-memory-profiler==0.61.0
+# JSON Processing
+orjson>=3.9.10
 
-# GPU Support (Optional - for deep learning)
-# torch-audio==2.1.2  # Audio processing
-# torch-vision==0.16.2  # Computer vision
+# File Processing
+openpyxl>=3.1.2
+xlrd>=2.0.1
+Pillow>=10.1.0
 
-# Documentation
-mkdocs==1.5.3
-mkdocs-material==9.4.8
+# Basic NLP (lightweight)
+nltk>=3.8.1
 
-# Code Quality
-pre-commit==3.6.0
-mypy==1.7.1
+# Time Series Analysis
+statsmodels>=0.14.0
 
-# Testing Utilities
-factory-boy==3.3.0
-faker==20.1.0
-responses==0.24.1
+# Security
+cryptography>=41.0.8
+bcrypt>=4.1.2
+itsdangerous>=2.1.2
 
-# API Mocking
-respx==0.20.2
+# Additional Streamlit Components
+streamlit-option-menu>=0.3.6
 
-# Load Testing
-locust==2.17.0
+# Development & Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+black>=23.12.0
+flake8>=6.1.0
 
-# Database Migrations
-alembic==1.12.1
+# Production
+gunicorn>=21.2.0
 
-# Session Management
-itsdangerous==2.1.2
+# Optional Financial Data Sources
+fredapi>=0.5.1
+pandas-datareader>=0.10.0
 
-# WebSocket Support
-websockets==12.0
+# Memory Management
+psutil>=5.9.6
 
-# Email (Optional)
-fastapi-mail==1.4.1
-
-# File Upload
-python-magic==0.4.27
-aiofiles==23.2.1
-
-# Backup & Recovery
-boto3==1.34.0      # AWS S3 integration
-google-cloud-storage==2.10.0  # GCS integration
-
-# Alternative Requirements for Different Environments
-
-# requirements-minimal.txt (Essential only)
-"""
-fastapi==0.104.1
-uvicorn==0.24.0
-pandas==2.1.4
-yfinance==0.2.28
-transformers==4.36.2
-torch==2.1.2
-scikit-learn==1.3.2
-streamlit==1.28.2
-plotly==5.17.0
-requests==2.31.0
-python-dotenv==1.0.0
-"""
-
-# requirements-gpu.txt (For GPU acceleration)
-"""
-torch==2.1.2+cu118
-transformers[torch]==4.36.2
-accelerate==0.25.0
-"""
-
-# requirements-production.txt (Production optimized)
-"""
-# All above dependencies plus:
-gunicorn==21.2.0
-psycopg2-binary==2.9.9
-redis==5.0.1
-prometheus-client==0.19.0
-sentry-sdk[fastapi]==1.39.1
-"""
-
-# System Dependencies (for Dockerfile)
-"""
-# Ubuntu/Debian:
-sudo apt-get update && sudo apt-get install -y \
-    build-essential \
-    libta-lib-dev \
-    libffi-dev \
-    libssl-dev \
-    python3-dev \
-    gcc \
-    g++ \
-    wget \
-    curl
-
-# For PDF processing:
-sudo apt-get install -y \
-    poppler-utils \
-    tesseract-ocr
-
-# For GPU support:
-# Follow NVIDIA CUDA installation guide
-"""
-
-# Installation Commands
-"""
-# Basic installation:
-pip install -r requirements.txt
-
-# With specific extras:
-pip install "fastapi[all]"
-pip install "transformers[torch]"
-pip install "streamlit[snowflake-connector]"
-
-# Development installation:
-pip install -r requirements.txt
-pip install -r requirements-dev.txt
-
-# GPU installation:
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-
-# Alternative TA-Lib installation if main fails:
-pip install talib-binary
-
-# For ARM64/M1 Macs:
-brew install ta-lib
-pip install TA-Lib
-
-# For Windows:
-# Download wheel from https://www.lfd.uci.edu/~gohlke/pythonlibs/#ta-lib
-pip install TA_Lib-0.4.28-cp311-cp311-win_amd64.whl
-"""
+# Web Scraping (lightweight)
+newspaper3k>=0.2.8

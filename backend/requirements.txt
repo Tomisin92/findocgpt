@@ -1,7 +1,6 @@
 # Core Framework
 fastapi==0.104.1
 uvicorn==0.24.0
-# FIXED: Updated pydantic to avoid Rust compilation issues
 pydantic>=2.8.0,<3.0.0
 pydantic-settings>=2.5.0
 
