@@ -7,8 +7,8 @@ pydantic-settings==2.1.0
 # Database & Storage
 sqlalchemy==2.0.23
 alembic==1.12.1
-# Fixed: Use specific working version of psycopg2-binary
-psycopg2-binary==2.9.7
+# Fixed: Use asyncpg instead of psycopg2-binary for Python 3.13 compatibility
+asyncpg==0.29.0
 redis==5.0.1
 
 # AI/ML Core - Working versions
