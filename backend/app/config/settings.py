@@ -16,7 +16,7 @@ class Settings(BaseSettings):
     LOG_LEVEL: str = "INFO"
     
     # Database
-    DATABASE_URL: str = "sqlite:///./findocgpt.db"
+    #DATABASE_URL: str = "sqlite:///./findocgpt.db"
     REDIS_URL: str = "redis://localhost:6379"
     
     # API Keys
