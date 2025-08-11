@@ -260,9 +260,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Hugging Face**: Model hosting and datasets platform
 - **FastAPI & React**: Modern web development frameworks
 
----
 
 **Built for hackathons, ready for production** 🚀
 
 For questions and support, please open an issue or contact the development team.
-"""
+
